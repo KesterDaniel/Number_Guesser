@@ -3,7 +3,7 @@ import random
 
 # random number between 1 an 100
 magic_number = random.randint(1, 100)
-print(magic_number)
+
 
 print("I'm thinking of a number between 1 and 100")
 
@@ -20,7 +20,7 @@ def play_game():
     attempts = 5
 
   while attempts != 0 and not game_over:
-    print(f"You have {attempts} attempts remaining to guess the number.")
+    print(f"You have {attempts} attempts remaining to guess the magic number.")
     choice = int(input("Take a guess: "))
 
     if choice > magic_number:
@@ -32,11 +32,13 @@ def play_game():
     else:
       game_over = True
   
+  print("===============================")
   if game_over == True:
     print("You guessed right")
-    print(magic_number)
   else:
     print("You guessed wrong")
-    print(magic_number)
+  
+  print(f"Magic Number is: {magic_number}")
+  print("===============================")
 
 play_game()

@@ -18,4 +18,15 @@ def play_game():
   else:
     attempts = 5
 
-  
+  while attempts != 0 and not game_over:
+    print(f"You have {attempts} attempts remaining to guess the number.")
+    choice = input("Take a guess: ")
+
+    if choice > magic_number:
+      print("Too high")
+      attempts -= 1
+    elif choice < magic_number:
+      print("Too low")
+      attempts -= 1
+    else:
+      game_over = True

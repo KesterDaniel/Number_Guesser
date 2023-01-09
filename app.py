@@ -4,7 +4,6 @@ import random
 # random number between 1 an 100
 magic_number = random.randint(1, 100)
 
-
 print("I'm thinking of a number between 1 and 100")
 
 # ask for difficulty level
@@ -23,6 +22,7 @@ def play_game():
     print(f"You have {attempts} attempts remaining to guess the magic number.")
     choice = int(input("Take a guess: "))
 
+    # comparing the choice with magic_number
     if choice > magic_number:
       print("Too high")
       attempts -= 1
@@ -32,6 +32,7 @@ def play_game():
     else:
       game_over = True
   
+  # deciding game outcome
   print("===============================")
   if game_over == True:
     print("You guessed right")

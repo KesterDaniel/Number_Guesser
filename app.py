@@ -35,9 +35,9 @@ def play_game():
   # deciding game outcome
   print("===============================")
   if game_over == True:
-    print("You guessed right")
+    print("You guessed right. You Won")
   else:
-    print("You guessed wrong")
+    print("You ran out of guesses. You Lose")
   
   print(f"Magic Number is: {magic_number}")
   print("===============================")
